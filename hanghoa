@@ -1,0 +1,277 @@
+{% expand 'static / Quan_Ly / Base.html'%}
+
+
+{% khối nội dung%} <! - END MENU SIDEBAR ->
+    <! - CONTAINER TRANG ->
+    <div class = "page-container">
+        <! - HEADER DESKTOP ->
+     <script src = "js / animsition.min.js"> </script>
+    <script src = "js / chucnang.js"> </script>
+    <script src = "js / main.js"> </script>
+<! - NỘI DUNG CHÍNH ->
+<div class = "main-content">
+    <div class = "section__content section__content - p30">
+        <div class = "container-liquid">
+
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-12">
+                        <h1> Mon an </h1>
+                        <div class = "table-responsive">
+                            <button onclick = "themmoi (true)" id = "themmoi"
+                                    class = "au-btn au-btn-icon au-btn - green au-btn - small">
+                                <i class = "zmdi zmdi-plus"> </i> Them moi
+                            </button>
+                            <table id = "mytable" class = "table table-bordred table-sọc">
+                                <thead>
+                                <th> Ma </th>
+                                <th> Hinh anh </th>
+                                <th> Ten mon an </th>
+                                <th> Gia mon an </th>
+                                <th> Loai </th>
+                                <th> Ten quan </th>
+                                <th>Chinh sua</th>
+                                <th> Delete </th>
+                                </thead>
+                                <thân>
+
+                                    <tr>
+                                        <td> 001 </td>
+                                        <td> <img src = "image / icon-1.png">
+                                        </td>
+                                        <td> Ga ran </td>
+                                        <td> 1500 </td>
+
+                                        <td>
+                                            Mon ga
+                                        </td>
+                                        <td>
+                                            KFc
+                                        </td>
+
+                                        </td>
+                                        <td>
+                                            <p onclick = "chinhsua (true)">
+                                                <button class = "btn btn-primary btn-xs" data-title = "Chinh sua"
+                                                        data-toggle = "modal" data-target = "# edit"> <span
+                                                        class = "glyphicon glyphicon-pencil"> </span> </button>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <form role = "form"
+                                                  action = "$ {pageContext.request.contextPath} / manager / product-manager / delete"
+                                                  method = "post">
+                                                <input type = "hidden" name = "product-id"
+                                                       value = '$ {item.id}' />
+                                                <button class = "btn btn-risk btn-xs" data-title = "Xoa"
+                                                        data-toggle = "modal" type = "submit"
+                                                        onClick = "return confirm ('Ban co chac chan muon xoa?')">
+                                                    <span class = "glyphicon glyphicon-thùng rác"> </span>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <div class = "clearfix"> </div>
+                            <ul class = "pagination pull-right">
+                                <li class = "disable"> <a href="#"> <span class = "glyphicon glyphicon-chevron-left"> </span> </a>
+                                </li>
+                                <li class = "active"> <a href="#"> 1 </a> </li>
+                                <li> <a href="#"> 2 </a> </li>
+                                <li> <a href="#"> 3 </a> </li>
+                                <li> <a href="#"> 4 </a> </li>
+                                <li> <a href="#"> 5 </a> </li>
+                                <li> <a href="#"> <span class = "glyphicon glyphicon-chevron-right"> </span> </a> </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<! - KẾT THÚC NỘI DUNG CHÍNH ->
+
+<hộp thoại id = "favDialog_themmoi">
+    <div class = "container">
+        <h1> Them moi </h1>
+        <hr>
+        <div class = "row">
+            <! - cột bên trái ->
+            <form class = "form-ngang" role = "form"
+                  action = "$ {pageContext.request.contextPath} / manager / product-manager / new" enctype = "Multiart / form-data"
+                  method = "post">
+            <div class = "col-md-3">
+                <div class = "text-center">
+                    <img src = "// placehold.it/100" class = "avatar img-circle" alt = "avatar">
+                    <h6> Them anh </h6>
+
+                    <input type = "file" name = "avt" class = "form-control">
+                </div>
+            </div>
+
+            <! - chỉnh sửa cột biểu mẫu ->
+            <div class = "col-md-9 personal-info">
+
+
+
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Ten mon an: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" name = "name" value = "">
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Gia mon an: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" name = "price" value = "">
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Loai: </label>
+                        <div class = "col-lg-8">
+                            <div class = "ui-select">
+                                <select class = "form-control" name = "ncc">
+
+                                    <option value = $ {item.id}> Pizza </option>
+                                     <option value = $ {item.id}> Tra sua </option>
+                                     <option value = $ {item.id}> Trang mieng </option>
+                                     <option value = $ {item.id}> Handmade </option>
+                                     <option value = $ {item.id}> Mon chay </option>
+                                     <option value = $ {item.id}> Com hop</option>
+                                     <option value = $ {item.id}> Mon ga </option>
+                                     <option value = $ {item.id}> Khac </option>
+
+                                </select>
+                            </div>
+                        </div>
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Ten cua hang: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" name = "name" value = "">
+                        </div>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Mo ta: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" name = "mota" value = "Description">
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-md-3 control-label"> </label>
+                        <div class = "col-md-8">
+
+                            <button class = "btn btn-primary"> Luu </button>
+
+                            <button class = "btn btn-primary" onclick = "themmoi (false)"> Huy </button>
+                        </div>
+                    </div>
+            </div>
+                </form>
+            </div>
+        </div>
+
+</dialog>
+
+
+    <div class = "container">
+        <h1> Chinh sua thong tin </h1>
+        <hr>
+        <div class = "row">
+            <! - cột bên trái ->
+            <div class = "col-md-3">
+                <div class = "text-center">
+                    <img src = "https://images.samsung.com/is/image/samsung/vn-uhd-nu7090-ua43nu7090kxxv-frontblack-108921413?$PD_GALLERY_L_JPG$"
+                         alt = "avatar">
+                    <h6> Tra sua tran chau </h6>
+
+                    <input type = "file" class = "form-control">
+                </div>
+            </div>
+
+            <! - chỉnh sửa cột biểu mẫu ->
+            <div class = "col-md-9 personal-info">
+
+
+                <form class = "form-ngang" role = "form">
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Ten mon an: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" value = "Hong tra sua">
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Gia mon an: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" value = "48.000">
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Thuong hieu: </label>
+                        <div class = "col-lg-8">
+                            <div class = "ui-select">
+                                <select class = "form-control">
+                                    <option value = "Nam"> Dingtea </option>
+                                    <option value = ""> Toco </option>
+                                    <option value = ""> Starbucks </option>
+                                    <option value = ""> Gongcha </option>
+                                    <option value = ""> koi the </option>
+                                    <option value = ""> Khac </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Loia: </label>
+                        <div class = "col-lg-8">
+                            <div class = "ui-select">
+                                <chọn>
+                                    <option value = "Nam"> Tra sua </option>
+                                    <option value = ""> handmade </option>
+                                    <option value = ""> Trang mieng </option>
+                                    <option value = ""> Pizza/Burger </option>
+                                    <option value = ""> Com hop</option>
+                                    <option value = ""> Ga ran</option>
+                                    <option value = ""> Sushi</option>
+                                    <option value = ""> Khac</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Mo ta: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" value = "Description">
+                        </div>
+                    </div>
+
+                    <div class = "form-group">
+                        <label class = "col-md-3 control-label"> </label>
+                        <div class = "col-md-8">
+
+                            <button class = "btn btn-primary"> Luu </button>
+
+                            <button class = "btn btn-primary" onclick = "chinhsua (false)"> Xoa </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</dialog>
+<! - END PAGE CONTAINER ->
+</div>
+
+<! - END WRAPPER ->
+</div>
+{% endblock%}
