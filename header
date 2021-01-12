@@ -1,0 +1,258 @@
+
+<aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+            <h1>
+                ADMIN
+            </h1>
+        </div>
+
+        <div class="menu-sidebar__content js-scrollbar1">
+            <nav class="navbar-sidebar">
+                <ul class="list-unstyled navbar__list">
+
+                    <li>
+
+                        <a href="QuanTriVien.html">
+                            <i class="zmdi zmdi-account "></i> Quan ly tri vien
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="nhanVien.html">
+                            <i class="zmdi zmdi-account-o"></i>Quan ly nhan vien
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="thanhVien.html">
+                            <i class="zmdi zmdi-male-female"></i>Quan ly thanh vien
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tinTuc.html">
+                            <i class="zmdi zmdi-notifications-active"></i>Quan ly tin
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Thuonghieu.html">
+                            <i class="zmdi zmdi-store"></i>Quan ly thuong hieu
+                        </a>
+                    </li>
+
+                    <li>
+
+                    <li>
+                        <a href="loaiDoAn.html">
+                            <i class="zmdi zmdi-view-headline"> </i>Quan ly loai do an
+                        </a>
+                    </li>
+
+                   <li>
+                        <a href="mathang.html">
+                            <i class="zmdi zmdi-shopping-cart"></i>Quan ly do an
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="donHang.html">
+                            <i class="zmdi zmdi-assignment"></i>Quan ly don hang
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="phanHoi.html">
+                            <i class="zmdi zmdi-comments"></i>Quan ly phan hoi
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+ <header class="header-desktop">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+                        <form class="form-header" action="" method="POST">
+                            <input class="au-input au-input--xl" type="text" name="search"
+                                   placeholder="Search for datas &amp; reports..."/>
+                            <button class="au-btn--submit" type="submit">
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
+                        </form>
+                        <div class="header-button">
+                            <div class="noti-wrap">
+                                <div class="noti__item js-item-menu">
+                                    <i class="zmdi zmdi-notifications-active"></i>
+                                    <span class="quantity">3</span>
+                                    <div class="email-dropdown js-dropdown">
+                                        <div class="email__title">
+                                            <p>Co  10+ hoat dong moi</p>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="image/avatar-06.png"
+                                                     alt="Tran Thu Ha"/>
+                                            </div>
+                                            <div class="content">
+                                                <p>Da them mon an</p>
+                                                <span>4 phut truoc</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="image/avatar-05.png"
+                                                     alt="Nguyen Thanh Long"/>
+                                            </div>
+                                            <div class="content">
+                                                <p>Da xoa hang hoa</p>
+                                                <span>11h, hom qua</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="image/avatar-04.png"
+                                                     alt="Le Hoang Nam"/>
+                                            </div>
+                                            <div class="content">
+                                                <p>Da them tin moi</p>
+                                                <span>22h,12/7/2020</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__footer">
+                                            <a href="#">Xem tat ca cac thong bao</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="image/avatar-03.png"
+                                                 alt="John Doe"/>
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">Admin</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="image/avatar-01.png"
+                                                             alt="admin "/>
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">admin</a>
+                                                    </h5>
+                                                    <span class="email">Quan tri vien</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a onclick="thongtintaikhoan()" href="#">
+                                                        <i class="zmdi zmdi-account"></i>Thong tin tai khoan
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Dang xuat</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <dialog id="thongtincanhan">
+            <div class="container">
+                <h1>Them moi</h1>
+                <hr>
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <img src="image/avatar-01.png" alt="avatar">
+                            <h6>Anh dai dien</h6>
+                            <input type="file" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- edit form column -->
+                    <div class="col-md-9 personal-info">
+
+
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Ten dang nhap/Email:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="ADMIN_1">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Mat khau:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" type="password" value="123456">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Nhap lai mat khau:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" type="password" value="123456">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Ho va ten:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="Nguyễn Thanh Bình">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Dia chi:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="Duong Xa, Gia Lam, Ha Noi">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label"> Nam/nu :</label>
+                                <div class="col-lg-8">
+                                    <div class="ui-select">
+                                        <select id="gioitinh" class="form-control">
+                                            <option value="Nam">Nam</option>
+                                            <option value="Nu">Nu</option>
+                                            <option value="ca2">Khac</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Email:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" type="email" value="ABCD@gmail.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"></label>
+                                <div class="col-md-8">
+
+                                    <button class="btn btn-primary">Luu</button>
+
+                                    <button class="btn btn-primary">Huy</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+1"
+2.54 cm
