@@ -1,0 +1,152 @@
+{% expand 'static / Quan_Ly / Base.html'%}
+{% tai tinh%}
+
+{% Khoi noi dung%} <! - END MENU SIDEBAR ->
+    <! - CONTAINER TRANG ->
+    <div class = "page-container">
+        <! - HEADER DESKTOP ->
+     <script src = "js / animsition.min.js"> </script>
+    <script src = "js / chucnang.js"> </script>
+    <script src = "js / main.js"> </script>
+<div class = "main-content">
+    <div class = "section__content section__content - p30">
+        <div class = "container-liquid">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-12">
+                        <h1> Bang tra cuu </h1>
+                        <div class = "table-responsive">
+                            <button onclick = "themmoi (true)" id = "themmoi"
+                                    class = "au-btn au-btn-icon au-btn - green au-btn - small">
+                                <i class = "zmdi zmdi-plus"> </i> Them moi
+                            </button>
+
+                            <table id = "mytable" class = "table table-bordred table-sọc">
+                                <thead>
+                                <th> Ma </th>
+                                <th> Ten do an </th>
+                                <th> Status </th>
+                                <th> Chinh xua </th>
+                                <th> Xoa </th>
+                                </thead>
+                                <than>
+                                    <tr>
+                                        <td> $ {item.id} </td>
+                                        <td> $ {item.nameCat} </td>
+                                        <td>
+                                            Binh thuong
+                                        </td>
+                                        <td>
+                                            <p onclick = "(() => {
+                                                    document.getElementById ('edit-cat-id'). value = '$ {item.id}';
+                                                    document.getElementById ('edit-cat-name'). value = '$ {item.nameCat}';
+                                                    chinhsua (true);
+                                                    }) () ">
+                                                <button class = "btn btn-primary btn-xs" data-title = "Chinh sua"
+                                                        data-toggle = "modal" data-target = "# edit">
+                                                    <span class = "glyphicon glyphicon-pencil"> </span>
+                                                </button>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <form action = "$ {pageContext.request.contextPath} / manager / category-manager / delete"
+                                                  method = "post">
+                                                <input type = "hidden" name = "delete-cat-id" value = "$ {item.id}">
+                                                <button onclick = "xoa ()" class = "btn btn-risk btn-xs"
+                                                        data-title = "Xoa"
+                                                        data-toggle = "modal" data-target = "# delete" name = "delete">
+                                                    <span class = "glyphicon glyphicon-thung rac"> </span>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div class = "clearfix"> </div>
+                            <ul class = "pagination pull-right">
+                                <li class = "disable"> <a href="#"> <span class = "glyphicon glyphicon-chevron-left"> </span> </a>
+                                </li>
+                                <li class = "active"> <a href="#"> 1 </a> </li>
+                                <li> <a href="#"> 2 </a> </li>
+                                <li> <a href="#"> 3 </a> </li>
+                                <li> <a href="#"> 4 </a> </li>
+                                <li> <a href="#"> 5 </a> </li>
+                                <li> <a href="#"> <span class = "glyphicon glyphicon-chevron-right"> </span> </a> </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<! - Ket thuc ->
+</div>
+<! - END PAGE CONTAINER ->
+
+<hop thoai id = "favDialog_themmoi">
+    <div class = "container">
+        <h1> Them moi </h1>
+        <hr>
+        <div class = "row">
+            <! - chinh sua cot bieu mau ->
+            <div class = "col-md-9 personal-info">
+                <form class = "form-ngang" action = "$ {pageContext.request.contextPath} / manager / category-manager / new"
+                      method = "post" role = "form">
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Phan loai: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" name = "name" type = "text">
+                        </div>
+                    </div>
+
+                    <div class = "form-group">
+                        <label class = "col-md-3 control-label"> </label>
+                        <div class = "col-md-8">
+                            <button class = "btn btn-primary"> Luu </button>
+                            <button class = "btn btn-primary" onclick = "return themmoi (false)"> Huy </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</dialog>
+
+<hop thoai id = "favDialog_chinhsua">
+    <div class = "container">
+        <h1> Chinh sua thong tin </h1>
+        <hr>
+        <div class = "row">
+            <! - chinh sua cot bieu mau ->
+            <div class = "col-md-9 personal-info">
+                <form class = "form-ngang" role = "form" action = "/ manager / category-manager / edit" method = "post">
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Phan loai: </label>
+                        <div class = "col-lg-8">
+                            <input type = "hidden" id = "edit-cat-id" name = "id">
+                            <input class = "form-control" type = "text" value = "bun pho" name = "name" id = "edit-cat-name">
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label class = "col-md-3 control-label"> </label>
+                        <div class = "col-md-8">
+                            <button class = "btn btn-primary"> Luu </button>
+                            <button class = "btn btn-primary" onclick = "return chinhsua (false)"> Hủy </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</dialog>
+<! - END PAGE CONTAINER ->
+</div>
+
+<! - END WRAPPER ->
+</div>
+{% endblock%}
