@@ -1,0 +1,197 @@
+{% expand 'static / Quan_Ly / Base.html'%}
+{% tai tinh%}
+
+{% khoi noi dung%}
+    <! - END MENU SIDEBAR ->
+    <! - CONTAINER TRANG ->
+    <div class = "page-container">
+        <! - HEADER DESKTOP ->
+     <script src = "js / animsition.min.js"> </script>
+    <script src = "js / chucnang.js"> </script>
+    <script src = "js / main.js"> </script>
+
+<! - Noi dung chinh ->
+<div class = "main-content">
+    <div class = "section__content section__content - p30">
+        <div class = "container-liquid">
+
+            <div class = "container">
+                <div class = "row">
+
+
+                    <div class = "col-md-12">
+                        <h1> Tra cuu ten thuong hieu </h1>
+                        <div class = "table-responsive">
+                            <button onclick = "themmoi (true)" id = "themmoi"
+                                    class = "au-btn au-btn-icon au-btn - green au-btn - small">
+                                <i class = "zmdi zmdi-plus"> </i> Them moi
+                            </button>
+
+
+                            <table id = "mytable" class = "table table-bordred table-sọc">
+
+                                <thead>
+
+                                <th> Ma </th>
+                                <th> Ten thuong hieu </th>
+                                <th> Status </th>
+                                <th> Chinh sua </th>
+                                <th> Delete </th>
+
+                                </thead>
+                                <than>
+
+
+
+                                    <td> $ {item.id} </td>
+                                    <td> $ {item.name} </td>
+                                    <td> $ {item.address}
+                                    </td>
+                                    <td>
+                                       Activity
+                                    </td>
+                                    <td> $ {item.phone} </td>
+                                    <td>
+                                        <p onclick = "chinhsua (true)">
+                                            <button class = "btn btn-primary btn-xs" data-title = "Chinh sua"
+                                                    data-toggle = "modal" data-target = "# edit"> <span
+                                                    class = "glyphicon glyphicon-pencil"> </span> </button>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <form role = "form"
+                                              action = "$ {pageContext.request.contextPath} / manager / ten thuong hieu / xoa"
+                                              method = "post">
+                                            <input type = "hidden" name = "id"
+                                                   value = '$ {item.id}' />
+                                            <button class = "btn btn-risk btn-xs" data-title = "Xoa"
+                                                    data-toggle = "modal" type = "submit"
+                                                    onClick = "return confirm ('Ban co chac chan muon xoa?')">
+                                                <span class = "glyphicon glyphicon-thung rac"> </span>
+                                            </button>
+                                        </form>
+                                    </td>
+
+
+                                </tr>
+
+
+
+                                </tbody>
+
+                            </table>
+
+                            <div class = "clearfix"> </div>
+                            <ul class = "pagination pull-right">
+                                <li class = "disable"> <a href="#"> <span class = "glyphicon glyphicon-chevron-left"> </span> </a>
+                                </li>
+                                <li class = "active"> <a href="#"> 1 </a> </li>
+                                <li> <a href="#"> 2 </a> </li>
+                                <li> <a href="#"> 3 </a> </li>
+                                <li> <a href="#"> 4 </a> </li>
+                                <li> <a href="#"> 5 </a> </li>
+                                <li> <a href="#"> <span class = "glyphicon glyphicon-chevron-right"> </span> </a> </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<! - Ket thuc noi dung chinh ->
+</div>
+<! - END PAGE CONTAINER ->
+
+<hop thoai id = "favDialog_themmoi">
+    <div class = "container">
+        <h1> Them moi </h1>
+        <hr>
+        <form class = "form-ngang" role = "form"
+        action = "$ {pageContext.request.contextPath} / manager / provider-management / new" enctype = "multiart / form-data"
+        method = "post">
+        <div class = "row">
+            <! - cot trai ->
+
+            <! - chinh sua cot bieu mau ->
+            <div class = "col-md-9 personal-info">
+
+
+                <form class = "form-ngang" role = "form">
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Ten thuong hieu: </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" name = "name">
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class = "form-group">
+                        <label class = "col-md-3 control-label"> </label>
+                        <div class = "col-md-8">
+
+                            <button class = "btn btn-primary"> Luu </button>
+
+                            <button class = "btn btn-primary" onclick = "themmoi (false)"> Huy </button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        </form>
+    </div>
+</dialog>
+
+<hộp thoại id = "favDialog_chinhsua">
+    <div class = "container">
+        <h1> Chinh sua thong tin </h1>
+        <hr>
+        <div class = "row">
+            <! - cot ben trai ->
+            <div class = "col-md-3">
+                <div class = "text-center">
+                    <img src = "https://www.giadinhnestle.com.vn/sites/default/files/articles/sliders/banner-th%C3%A1ng-1-630X350.jpg"
+                         alt = "avatar">
+
+
+                    <input type = "file" class = "form-control">
+                </div>
+            </div>
+
+            <! - chinh sua cot bieu mau ->
+            <div class = "col-md-9 personal-info">
+
+
+                <form class = "form-ngang" role = "form">
+                    <div class = "form-group">
+                        <label class = "col-lg-3 control-label"> Ten thuong hieu </label>
+                        <div class = "col-lg-8">
+                            <input class = "form-control" type = "text" value = "Công ty bánh kẹo">
+                        </div>
+                    </div>
+
+
+                    <div class = "form-group">
+                        <label class = "col-md-3 control-label"> </label>
+                        <div class = "col-md-8">
+
+                            <button class = "btn btn-primary"> Luu </button>
+
+                            <button class = "btn btn-primary"> Huy </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</dialog>
+<! - END PAGE CONTAINER ->
+</div>
+
+<! - END WRAPPER ->
+</div>
+{% endblock%}
