@@ -1,0 +1,122 @@
+{% extends 'static/Quan_Ly/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- END MENU SIDEBAR-->
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+     <script src="js/animsition.min.js"></script>
+    <script src="js/chucnang.js"></script>
+    <script src="js/main.js"></script>
+<!-- MAIN CONTENT-->
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-12">
+                        <h1>Y kien phan hoi</h1>
+                        <div class="table-responsive">
+
+
+                            <table id="mytable" class="table table-bordred table-striped">
+
+                                <thead>
+
+                                <th>Ho va ten</th>
+                                <th> Noi dung phan hoi</th>
+                                <th>Xoa</th>
+
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>Ngyen Thi Hao</td>
+                                    <td>chat luong do an ngon</td>
+
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Ha Trang Linh</td>
+                                    <td>Do an giao den bi nguoi</td>
+
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+
+                                    <td>Hoàng văn nam</td>
+                                    <td>do an ngon, hop ve sinh</td>
+
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+
+                                    <td>Nguyen Thanh Binh</td>
+                                    <td>lan sau se tiep tuc ung ho</td>
+
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+
+                                </tr>
+
+
+                                </tbody>
+
+                            </table>
+
+                            <div class="clearfix"></div>
+                            <ul class="pagination pull-right">
+                                <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PAGE CONTAINER -->
+</div>
+
+<!-- END PAGE WRAPPER -->
+</div>
+{% endblock %}
