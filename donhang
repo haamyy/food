@@ -1,0 +1,127 @@
+{% extends 'static/Quan_Ly/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- END MENU SIDEBAR-->
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+     <script src="js/animsition.min.js"></script>
+    <script src="js/chucnang.js"></script>
+    <script src="js/main.js"></script>
+
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-12">
+                        <h1>Bang tra cuu don hang</h1>
+                        <div class="table-responsive">
+
+
+                            <table id="mytable" class="table table-bordred table-striped">
+
+                                <thead>
+
+                                <th> Ma</th>
+                                <th>Ho va ten khach hang</th>
+                                <th>So luong san pham</th>
+                                <th>Tong tien</th>
+                                <th>Trang thai</th>
+                                <th>Xoa</th>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>001</td>
+                                    <td>Dang Ha My</td>
+                                    <td> 2</td>
+                                    <td>180.000</td>
+                                    <td> Da giao</td>
+                                    <td>
+                                        <button name="delete-id" onclick="xoa()" class="btn btn-danger btn-xs"
+                                                data-title="Delete" data-toggle="modal" data-target="#delete">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Tran Duc Thinh</td>
+                                    <td>1</td>
+                                    <td>15.000</td>
+                                    <td> Da giao</td>
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Nguyen Thi Ha</td>
+                                    <td>5</td>
+                                    <td>3.520.000</td>
+                                    <td> Dang giao</td>
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>Tran Thu Ha</td>
+                                    <td>2</td>
+                                    <td>50.000</td>
+                                    <td>Dang giao</td>
+
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+
+                                </tr>
+
+                                </tbody>
+
+                            </table>
+
+                            <div class="clearfix"></div>
+                            <ul class="pagination pull-right">
+                                <li class="disabled"><a href="#"><span
+                                        class="glyphicon glyphicon-chevron-left"></span></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT-->
+
+<!-- END PAGE CONTAINER -->
+</div>
+
+<!-- END PAGE WRAPPER -->
+</div>
+{% endblock %}
