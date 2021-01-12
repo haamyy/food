@@ -1,0 +1,309 @@
+{% extends 'static/Quan_Ly/Base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- MAIN CONTENT-->
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-12">
+                        <h1>Uu dai</h1>
+                        <div class="table-responsive">
+                            <button onclick="themmoi()" id="themmoi"
+                                    class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                <i class="zmdi zmdi-plus"></i>Them moi
+                            </button>
+
+
+                            <table id="mytable" class="table table-bordred table-striped">
+
+                                <thead>
+
+                                <th>Ma</th>
+                                <th>Tieu de</th>
+                                <th>Noi dung</th>
+                                <th>Sua</th>
+                                <th>Xoa</th>
+                                <th>Xac nhan</th>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>001</td>
+                                    <td>Thu 3 khuyen mai pizza M1T1</td>
+                                    <td><select>
+                                        <option>Hoat dong</option>
+                                        <option>Khong hoat dong</option>
+                                    </select></td>
+                                    <td>
+                                        <p onclick="chinhsua()">
+                                            <button class="btn btn-primary btn-xs" data-title="Chinh sua"
+                                                    data-toggle="modal" data-target="#edit"><span
+                                                    class="glyphicon glyphicon-pencil"></span></button>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+                                    <td>
+                                        <button onclick="xacnhan()" class="btn au-btn--green  btn-xs"
+                                                data-title="Confirm" data-toggle="modal" data-target="#confirm"><span
+                                                class="glyphicon glyphicon-check"></span></button>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>002</td>
+                                    <td>Giam 10% hoa don khi dat hang tu 16h-18h</td>
+                                    <td><select>
+                                        <option>Hoat dong</option>
+                                        <option>Khong hoat dong</option>
+                                    </select></td>
+                                    <td>
+                                        <p onclick="chinhsua()">
+                                            <button class="btn btn-primary btn-xs" data-title="Chinh sua"
+                                                    data-toggle="modal" data-target="#edit"><span
+                                                    class="glyphicon glyphicon-pencil"></span></button>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+                                    <td>
+                                        <button onclick="xacnhan()" class="btn au-btn--green  btn-xs"
+                                                data-title="Confirm" data-toggle="modal" data-target="#confirm"><span
+                                                class="glyphicon glyphicon-check"></span></button>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Ga ran Lotterria giam gia 40% cho mieng ga thu 2</td>
+                                    <td><select>
+                                        <option>Hoat dong</option>
+                                        <option>Khong hoat dong</option>
+                                    </select></td>
+                                    <td>
+                                        <p onclick="chinhsua()">
+                                            <button class="btn btn-primary btn-xs" data-title="Chinh sua"
+                                                    data-toggle="modal" data-target="#edit"><span
+                                                    class="glyphicon glyphicon-pencil"></span></button>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+                                    <td>
+                                        <button onclick="xacnhan()" class="btn au-btn--green  btn-xs"
+                                                data-title="Confirm" data-toggle="modal" data-target="#confirm"><span
+                                                class="glyphicon glyphicon-check"></span></button>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>Tra sua Dingtea giam 50% toan menu</td>
+                                    <td><select>
+                                        <option>Hoat dong</option>
+                                        <option>Khong hoat dong</option>
+                                    </select></td>
+                                    <td>
+                                        <p onclick="chinhsua()">
+                                            <button class="btn btn-primary btn-xs" data-title="Chinh sua"
+                                                    data-toggle="modal" data-target="#edit"><span
+                                                    class="glyphicon glyphicon-pencil"></span></button>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+                                    <td>
+                                        <button onclick="xacnhan()" class="btn au-btn--green  btn-xs"
+                                                data-title="Confirm" data-toggle="modal" data-target="#confirm"><span
+                                                class="glyphicon glyphicon-check"></span></button>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>005</td>
+                                    <td>Combo an sang banh mi + ca phe gia 30k</td>
+                                    <td><select>
+                                        <option>Hoat dong</option>
+                                        <option>Khong hoat dong</option>
+                                    </select></td>
+                                    <td>
+                                        <p onclick="chinhsua()">
+                                            <button class="btn btn-primary btn-xs" data-title="Chinh sua"
+                                                    data-toggle="modal" data-target="#edit"><span
+                                                    class="glyphicon glyphicon-pencil"></span></button>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <button onclick="xoa()" class="btn btn-danger btn-xs" data-title="Delete"
+                                                data-toggle="modal" data-target="#delete"><span
+                                                class="glyphicon glyphicon-trash"></span></button>
+                                    </td>
+                                    <td>
+                                        <button onclick="xacnhan()" class="btn au-btn--green  btn-xs"
+                                                data-title="Confirm" data-toggle="modal" data-target="#confirm"><span
+                                                class="glyphicon glyphicon-check"></span></button>
+                                    </td>
+
+                                </tr>
+
+
+                                </tbody>
+
+                            </table>
+
+                            <div class="clearfix"></div>
+                            <ul class="pagination pull-right">
+                                <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT-->
+</div>
+<!-- END PAGE CONTAINER-->
+
+<dialog id="favDialog_chinhsua">
+    <div class="container">
+        <h1>Chinh sua thong tin</h1>
+        <hr>
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img src="https://www.giadinhnestle.com.vn/sites/default/files/articles/sliders/banner-th%C3%A1ng-1-630X350.jpg"
+                         alt="avatar">
+
+                    <input type="file" class="form-control">
+                </div>
+            </div>
+
+            <!-- edit form column -->
+            <div class="col-md-9 personal-info">
+
+
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Tieu de:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" value="Starbucks ngay hoi Fappuchino day	">
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Noi dung:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" value="Noi dung">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        <div class="col-md-8">
+
+                            <button class="btn btn-primary">Luu</button>
+
+                            <button class="btn btn-primary">Huy</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</dialog>
+
+<dialog id="favDialog_themmoi">
+    <div class="container">
+        <h1>Them moi</h1>
+        <hr>
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+                    <h6>Anh dai dien</h6>
+
+                    <input type="file" class="form-control">
+                </div>
+            </div>
+
+            <!-- edit form column -->
+            <div class="col-md-9 personal-info">
+
+
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Tieu de:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text">
+                        </div>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Noi dung:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        <div class="col-md-8">
+
+                            <button class="btn btn-primary">Luu</button>
+
+                            <button class="btn btn-primary">Huy</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</dialog>
+<!-- END PAGE CONTAINER -->
+</div>
+
+<!-- END PAGE WRAPPER -->
+
+{% endblock %}
